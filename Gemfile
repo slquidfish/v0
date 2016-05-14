@@ -7,6 +7,8 @@ gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'less-rails', '~> 2.7', '>= 2.7.1'
+gem 'pandoc-ruby', '~> 2.0', '>= 2.0.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -32,6 +34,8 @@ gem 'jbuilder', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -45,3 +49,45 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'bootstrap-sass'
+gem 'haml-rails'
+gem 'high_voltage'
+gem 'simple_form'
+gem 'therubyracer', :platform=>:ruby
+
+group :development do
+  gem 'better_errors'
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_apps_pages'
+  gem 'rails_apps_testing'
+  gem 'rails_layout'
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
+  gem 'spring-commands-rspec'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
+end
